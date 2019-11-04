@@ -100,5 +100,5 @@ https://github.com/duo-inc/EasyMotionRecorder
 ## IRIAM(ZIZAI Inc.)
 https://iriam.com/staffroll/
 
-## SHOWROOM xR (2019.9-)
+## SHOWROOM xR (2018.9-)
 クライアントエンジニアとしてUnityをシバいてます。
