@@ -61,6 +61,10 @@ VTuber配信システムLuppetの顔認識の工夫
 https://speakerdeck.com/izm/face-recognition-for-luppet-for-xr-tech-nagoya-number-4
 
 # 調べもの
+## ソーシャルゲームのクライアントエンジニア入門以前 (2020.7)
+Docusaurus+Githubホスティングでサイトを作ったやつ。GPL3で公開してます。2万文字くらいで10日
+https://neon-izm.github.io/before_join_socialgame/
+
 ## Qiita幾つか
 https://qiita.com/neon-izm
 
