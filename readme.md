@@ -88,6 +88,9 @@ https://tech.showroom.co.jp/entry/2019/05/17/191216
 可愛くなる、不自然な挙動を減らす、という感じでゴリゴリ書いてます。  
 https://luppet.appspot.com/  
 
+工夫の一端をこの辺で発表しています
+https://github.com/neon-izm/Portfolio/blob/master/readme.md#xr-tech-nagoya-4-20198
+
 ## VTuber花奏かのんさんのベース演奏モーキャプシステム(2019.6)
 ベーシストVtuber◆3Dモデルでベースを弾きたい！プロジェクト【花奏かのん】  
 https://camp-fire.jp/projects/view/90770  
