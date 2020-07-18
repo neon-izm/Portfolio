@@ -6,6 +6,10 @@ neon-izm (twitter @izm) の最近のやったことをまとめておきます�
 https://twitter.com/izm
 
 # Hobby
+## VR向け下半身トラッキングセンサー+ソフトウェア Haritora(2020.5-)
+この辺で開発中。PCB起こしてケースは3D CAD使ってSteamVRドライバをC++で書いてUnityでコントロールアプリ書いて。みたいな感じでワイワイ作ってます。  
+https://twitter.com/HaritoraVR/status/1256930434312572930
+
 ## DMM.make ROBOTのプリメイドAIハック(2019.6-2019.7)
 blog
 元値15万円の人型ロボット「プリメイドAI」が2万円で買えるようになったのでハックして遊ぶとすごく楽しい。という話  
