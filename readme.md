@@ -62,7 +62,7 @@ https://speakerdeck.com/izm/face-recognition-for-luppet-for-xr-tech-nagoya-numbe
 
 # 調べもの
 ## ソーシャルゲームのクライアントエンジニア入門以前 (2020.7)
-Docusaurus+Githubホスティングでサイトを作ったやつ。GPL3で公開してます。2万文字くらいで10日
+Docusaurus+Githubホスティングでサイトを作ったやつ。GPL3で公開してます。2万文字くらいで10日  
 https://neon-izm.github.io/before_join_socialgame/
 
 ## Qiita幾つか
