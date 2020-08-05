@@ -83,6 +83,14 @@ https://tech.showroom.co.jp/entry/2019/05/17/191216
 
 
 # お手伝い
+## VTuber Paryi さんの3Dお披露目配信 inビリビリ(2020.7)
+https://twitter.com/izm/status/1290986453934018560
+
+技術スタックはVMC,EVMC4U,CineSwitcherベースで案件向けのカスタムを入れました。  
+他にはViveTracker、PPS v2をほんのり。マルチシーンのアレコレとか保守性も考慮。ビリビリのコメントギフト連携とかも動いたりします。
+
+2week程度。
+
 
 ## Luppetの顔認識処理(Unity実装) (2018.11-)
 可愛くなる、不自然な挙動を減らす、という感じでゴリゴリ書いてます。  
