@@ -8,7 +8,10 @@ https://twitter.com/izm
 # Hobby
 ## VR向け下半身トラッキングセンサー+ソフトウェア Haritora(2020.5-)
 この辺で開発中。PCB起こしてケースは3D CAD使ってSteamVRドライバをC++で書いてUnityでコントロールアプリ書いて。みたいな感じでワイワイ作ってます。  
-https://twitter.com/HaritoraVR/status/1256930434312572930
+
+2020/11から一般販売開始して、開発費のリクープは出来たので良かった…
+
+https://izm-11.hatenablog.com/entry/2020/11/15/133439
 
 ## DMM.make ROBOTのプリメイドAIハック(2019.6-2019.7)
 blog
