@@ -6,7 +6,12 @@ neon-izm (twitter @izm) の最近のやったことをまとめておきます�
 https://twitter.com/izm
 
 # Hobby
-## VR向け下半身トラッキングセンサー+ソフトウェア Haritora(2020.5-)
+## VR向け下半身トラッキングセンサー+ソフトウェア HaritoraX(2021.3-)
+Haritoraの量産版をPanasonicグループ会社のShiftall社と合同で開発しています。
+
+https://ja.shiftall.net/archives/704/
+
+## VR向け下半身トラッキングセンサー+ソフトウェア Haritora(2020.5-2020.10発売)
 この辺で開発中。PCB起こしてケースは3D CAD使ってSteamVRドライバをC++で書いてUnityでコントロールアプリ書いて。みたいな感じでワイワイ作ってます。  
 
 2020/11から一般販売開始して、開発費のリクープは出来たので良かった…
@@ -120,7 +125,7 @@ https://github.com/duo-inc/EasyMotionRecorder
 
 # フルタイムお仕事
 ## IRIAM(ZIZAI Inc.)
-https://iriam.com/staffroll/
+https://web.archive.org/web/20200319230226if_/https://iriam.com/staffroll/
 
 ## SHOWROOM xR (2018.9-)
 クライアントエンジニアとしてUnityをシバいてます。
