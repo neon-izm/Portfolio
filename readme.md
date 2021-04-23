@@ -8,6 +8,7 @@ https://twitter.com/izm
 # Hobby
 ## VR向け下半身トラッキングセンサー+ソフトウェア HaritoraX(2021.3-)
 Haritoraの量産版をPanasonicグループ会社のShiftall社と合同で開発しています。
+ハードウェア周りはShiftallさん、ソフトウェア側は相変わらず僕です。
 
 https://ja.shiftall.net/archives/704/
 
