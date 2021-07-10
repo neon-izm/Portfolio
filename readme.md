@@ -73,6 +73,12 @@ https://vrm-nagoya.connpass.com/event/140473/
 VTuber配信システムLuppetの顔認識の工夫  
 https://speakerdeck.com/izm/face-recognition-for-luppet-for-xr-tech-nagoya-number-4
 
+## トラッキング技術勉強会(2021.6)
+https://connpass.com/event/214152/ 
+
+Haritoraのような安価なIMUモーキャプの特性と考慮点について  
+https://speakerdeck.com/izm/haritorafalseyounaan-jia-naimumokiyapufalsete-xing-tokao-lu-dian-nituite  
+
 # 調べもの
 ## ソーシャルゲームのクライアントエンジニア入門以前 (2020.7)
 Docusaurus+Githubホスティングでサイトを作ったやつ。GPL3で公開してます。2万文字くらいで10日  
