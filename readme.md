@@ -12,6 +12,9 @@ Haritoraの量産版をPanasonicグループ会社のShiftall社と合同で開�
 
 https://ja.shiftall.net/archives/704/
 
+HaritoraXはCES2022に出展し、CES2022 Innovation Award (Virtual & Augmented Reality)を受賞しました。  
+https://www.ces.tech/Innovation-Awards/Honorees/2022/Honorees/H/HaritoraX.aspx
+
 ## VR向け下半身トラッキングセンサー+ソフトウェア Haritora(2020.5-2020.10発売)
 この辺で開発中。PCB起こしてケースは3D CAD使ってSteamVRドライバをC++で書いてUnityでコントロールアプリ書いて。みたいな感じでワイワイ作ってます。  
 
@@ -134,5 +137,9 @@ https://github.com/duo-inc/EasyMotionRecorder
 ## IRIAM(ZIZAI Inc.)
 https://web.archive.org/web/20200319230226if_/https://iriam.com/staffroll/
 
-## SHOWROOM xR (2018.9-)
-クライアントエンジニアとしてUnityをシバいてます。
+## SHOWROOM xR (2018.9-2021.9)
+クライアントエンジニアとしてUnityをシバいていました。
+
+## REALITY inc (2021.11-)
+クライアントエンジニアとしてUnityをシバいています。
+
