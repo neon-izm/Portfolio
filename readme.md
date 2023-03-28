@@ -82,6 +82,10 @@ https://connpass.com/event/214152/
 Haritoraのような安価なIMUモーキャプの特性と考慮点について  
 https://speakerdeck.com/izm/haritorafalseyounaan-jia-naimumokiyapufalsete-xing-tokao-lu-dian-nituite  
 
+## CEDEC 2022 
+VRプロダクト開発ラウンドテーブル2022
+https://cedec.cesa.or.jp/2022/session/detail/155
+
 # 調べもの
 ## ソーシャルゲームのクライアントエンジニア入門以前 (2020.7)
 Docusaurus+Githubホスティングでサイトを作ったやつ。GPL3で公開してます。2万文字くらいで10日  
