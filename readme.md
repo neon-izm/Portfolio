@@ -15,6 +15,9 @@ https://ja.shiftall.net/archives/704/
 HaritoraXはCES2022に出展し、CES2022 Innovation Award (Virtual & Augmented Reality)を受賞しました。  
 https://www.ces.tech/Innovation-Awards/Honorees/2022/Honorees/H/HaritoraX.aspx
 
+“同人ハード”が「CES」で賞を取るまで　メタバース住人が愛用する「HaritoraX」誕生の軌跡
+https://www.itmedia.co.jp/news/articles/2204/30/news060.html
+
 ## VR向け下半身トラッキングセンサー+ソフトウェア Haritora(2020.5-2020.10発売)
 この辺で開発中。PCB起こしてケースは3D CAD使ってSteamVRドライバをC++で書いてUnityでコントロールアプリ書いて。みたいな感じでワイワイ作ってます。  
 
