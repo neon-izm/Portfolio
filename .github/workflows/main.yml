@@ -16,7 +16,12 @@ jobs:
       - name: Define user mappings
         run: |
           # Properly define and echo the JSON mapping
-          USER_EMAIL_MAPPING_JSON='{"username1":"email1@example.com", "username2":"email2@example.com", "unknown":"unknown@example.com"}'
+          USER_EMAIL_MAPPING_JSON='{
+          USER_EMAIL_MAPPING_JSON+="github_username1":"email1@example.com",
+          USER_EMAIL_MAPPING_JSON+="username2_github":"email2@example.com",
+          # You can add many members like this
+          # USER_EMAIL_MAPPING_JSON+="john_smith_github":"email3@example.com",
+          USER_EMAIL_MAPPING_JSON+="unknown":"unknown@example.com"}'
           echo "USER_EMAIL_MAPPING_JSON=$USER_EMAIL_MAPPING_JSON" >> $GITHUB_ENV
 
       - name: Get usernames and map to emails
