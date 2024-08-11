@@ -33,19 +33,19 @@ jobs:
           USER_EMAIL_MAPPING_JSON: ${{ env.USER_EMAIL_MAPPING_JSON }}
           PR_OWNER_USERNAME: ${{ env.PR_OWNER_USERNAME }}
         run: |
-          # Simulating two hardcoded reviewers for testing
-          PR_REVIEWERS_JSON='["username2_github", "username3_github"]'
-          PR_REVIEWERS_EMAILS=$(echo $PR_REVIEWERS_JSON | jq -r "[.[] as \$username | \"<at>\" + ($USER_EMAIL_MAPPING_JSON[\$username] // \"unknown@example.com\") + \"</at>\"] | join(', ')")
-          echo "PR_REVIEWERS_EMAILS=$PR_REVIEWERS_EMAILS"
-
-          echo "Using USERNAME: $PR_OWNER_USERNAME"
-          echo "JSON Mapping: $USER_EMAIL_MAPPING_JSON"
-          # Use `jq` to extract the email, ensuring the variable is used correctly
-          PR_OWNER_EMAIL=$(echo "$USER_EMAIL_MAPPING_JSON" | jq -r --arg username "$PR_OWNER_USERNAME" '.[$username]')
-          echo "PR_OWNER_EMAIL=$PR_OWNER_EMAIL"
-          
-          if [[ -z "$PR_OWNER_EMAIL" ]]; then
-            PR_OWNER_EMAIL="unknown@example.com"
-          fi
-          
-          echo "Resolved PR Owner Email: $PR_OWNER_EMAIL"
+           # Simulating two hardcoded reviewers for testing
+            PR_REVIEWERS_JSON='["username2_github", "username3_github"]'
+            PR_REVIEWERS_EMAILS=$(echo $PR_REVIEWERS_JSON | jq -r --argjson userMap "$USER_EMAIL_MAPPING_JSON" '[.[] as $username | "<at>" + ($userMap[$username] // "unknown@example.com") + "</at>"] | join(", ")')
+            echo "PR_REVIEWERS_EMAILS=$PR_REVIEWERS_EMAILS"
+        
+            echo "Using USERNAME: $PR_OWNER_USERNAME"
+            echo "JSON Mapping: $USER_EMAIL_MAPPING_JSON"
+            # Use `jq` to extract the email, ensuring the variable is used correctly
+            PR_OWNER_EMAIL=$(echo "$USER_EMAIL_MAPPING_JSON" | jq -r --arg username "$PR_OWNER_USERNAME" '.[$username]')
+            echo "PR_OWNER_EMAIL=$PR_OWNER_EMAIL"
+            
+            if [[ -z "$PR_OWNER_EMAIL" ]]; then
+              PR_OWNER_EMAIL="unknown@example.com"
+            fi
+            
+            echo "Resolved PR Owner Email: $PR_OWNER_EMAIL"
