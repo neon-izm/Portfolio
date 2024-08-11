@@ -11,7 +11,7 @@ jobs:
       - name: Setup Dummy Data
         run: |
           # Directly set the variable without single quotes
-          echo "PR_OWNER_USERNAME=username1" >> $GITHUB_ENV
+          echo "PR_OWNER_USERNAME=username2_github" >> $GITHUB_ENV
 
       - name: Define user mappings
         run: |
@@ -20,6 +20,7 @@ jobs:
           # Append each user-email pair
           USER_EMAIL_MAPPING_JSON+=' "github_username1": "email1@example.com",'
           USER_EMAIL_MAPPING_JSON+=' "username2_github": "email2@example.com",'
+          USER_EMAIL_MAPPING_JSON+=' "username3_github": "email2@example.com",'
           # Close the JSON object
           USER_EMAIL_MAPPING_JSON+='"unknown": "unknown@example.com" }'
           echo "USER_EMAIL_MAPPING_JSON=$USER_EMAIL_MAPPING_JSON" >> $GITHUB_ENV
