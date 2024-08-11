@@ -19,7 +19,9 @@ jobs:
 
       - name: Get usernames and map to emails
         run: |
+          echo $USER_EMAIL_MAPPING_JSON
           # Mimicking PR owner retrieval with a fixed value
+          # Ensure to use `jq` with the correct JSON parsing pattern
           PR_OWNER_EMAIL=$(echo $USER_EMAIL_MAPPING_JSON | jq -r --arg username "$PR_OWNER_USERNAME" '.[$username]')
           echo "PR_OWNER_EMAIL=$PR_OWNER_EMAIL"
           if [[ -z "$PR_OWNER_EMAIL" ]]; then
