@@ -33,6 +33,11 @@ jobs:
           USER_EMAIL_MAPPING_JSON: ${{ env.USER_EMAIL_MAPPING_JSON }}
           PR_OWNER_USERNAME: ${{ env.PR_OWNER_USERNAME }}
         run: |
+          # Simulating two hardcoded reviewers for testing
+          PR_REVIEWERS_JSON='["username2_github", "username3_github"]'
+          PR_REVIEWERS_EMAILS=$(echo $PR_REVIEWERS_JSON | jq -r "[.[] as \$username | \"<at>\" + ($USER_EMAIL_MAPPING_JSON[\$username] // \"unknown@example.com\") + \"</at>\"] | join(', ')")
+          echo "PR_REVIEWERS_EMAILS=$PR_REVIEWERS_EMAILS"
+
           echo "Using USERNAME: $PR_OWNER_USERNAME"
           echo "JSON Mapping: $USER_EMAIL_MAPPING_JSON"
           # Use `jq` to extract the email, ensuring the variable is used correctly
