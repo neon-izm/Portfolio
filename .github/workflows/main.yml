@@ -23,7 +23,7 @@ jobs:
           USER_EMAIL_MAPPING_JSON+="username2_github":"email2@example.com",
           USER_EMAIL_MAPPING_JSON+="unknown":"unknown@example.com"}'
           echo "USER_EMAIL_MAPPING_JSON=$USER_EMAIL_MAPPING_JSON" >> $GITHUB_ENV
-
+          echo "current USER_EMAIL_MAPPING_JSON=$USER_EMAIL_MAPPING_JSON"
       - name: Get usernames and map to emails
         env:
           USER_EMAIL_MAPPING_JSON: ${{ env.USER_EMAIL_MAPPING_JSON }}
