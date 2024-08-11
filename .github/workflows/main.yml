@@ -1,0 +1,28 @@
+name: Debug User Email Mapping
+
+on: 
+  workflow_dispatch:
+  push:
+
+jobs:
+  debug_mapping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Dummy Data
+        run: |
+          echo "PR_OWNER_USERNAME='username1'" >> $GITHUB_ENV
+
+      - name: Define user mappings
+        run: |
+          USER_EMAIL_MAPPING_JSON='{"username1":"email1@example.com", "username2":"email2@example.com", "unknown":"unknown@example.com"}'
+          echo "USER_EMAIL_MAPPING_JSON='$USER_EMAIL_MAPPING_JSON'" >> $GITHUB_ENV
+
+      - name: Get usernames and map to emails
+        run: |
+          # Mimicking PR owner retrieval with a fixed value
+          PR_OWNER_EMAIL=$(echo $USER_EMAIL_MAPPING_JSON | jq -r --arg username "$PR_OWNER_USERNAME" '.[$username]')
+          echo "PR_OWNER_EMAIL=$PR_OWNER_EMAIL"
+          if [[ -z "$PR_OWNER_EMAIL" ]]; then
+            PR_OWNER_EMAIL="unknown@example.com"
+          fi
+          echo "Resolved PR Owner Email: $PR_OWNER_EMAIL"
