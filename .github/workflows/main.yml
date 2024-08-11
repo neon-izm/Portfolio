@@ -14,7 +14,7 @@ jobs:
 
       - name: Define user mappings
         run: |
-          USER_EMAIL_MAPPING_JSON={"username1":"email1@example.com", "username2":"email2@example.com", "unknown":"unknown@example.com"}
+          USER_EMAIL_MAPPING_JSON='{"username1":"email1@example.com", "username2":"email2@example.com", "unknown":"unknown@example.com"}'
           echo "USER_EMAIL_MAPPING_JSON=$USER_EMAIL_MAPPING_JSON" >> $GITHUB_ENV
 
       - name: Get usernames and map to emails
@@ -22,7 +22,7 @@ jobs:
           echo $USER_EMAIL_MAPPING_JSON
           # Mimicking PR owner retrieval with a fixed value
           # Ensure to use `jq` with the correct JSON parsing pattern
-          PR_OWNER_EMAIL=$(echo $USER_EMAIL_MAPPING_JSON | jq -r --arg username "$PR_OWNER_USERNAME" '.[$username]')
+          PR_OWNER_EMAIL=$(echo "$USER_EMAIL_MAPPING_JSON" | jq -r --arg username "$PR_OWNER_USERNAME" '.[$username]')
           echo "PR_OWNER_EMAIL=$PR_OWNER_EMAIL"
           if [[ -z "$PR_OWNER_EMAIL" ]]; then
             PR_OWNER_EMAIL="unknown@example.com"
