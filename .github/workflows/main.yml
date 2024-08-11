@@ -10,21 +10,30 @@ jobs:
     steps:
       - name: Setup Dummy Data
         run: |
-          echo "PR_OWNER_USERNAME='username1'" >> $GITHUB_ENV
+          # Directly set the variable without single quotes
+          echo "PR_OWNER_USERNAME=username1" >> $GITHUB_ENV
 
       - name: Define user mappings
         run: |
+          # Properly define and echo the JSON mapping
           USER_EMAIL_MAPPING_JSON='{"username1":"email1@example.com", "username2":"email2@example.com", "unknown":"unknown@example.com"}'
           echo "USER_EMAIL_MAPPING_JSON=$USER_EMAIL_MAPPING_JSON" >> $GITHUB_ENV
 
       - name: Get usernames and map to emails
+        env:
+          USER_EMAIL_MAPPING_JSON: ${{ env.USER_EMAIL_MAPPING_JSON }}
+          PR_OWNER_USERNAME: ${{ env.PR_OWNER_USERNAME }}
         run: |
+          # Display the JSON to verify it's correct
           echo $USER_EMAIL_MAPPING_JSON
-          # Mimicking PR owner retrieval with a fixed value
-          # Ensure to use `jq` with the correct JSON parsing pattern
-          PR_OWNER_EMAIL=$(echo "$USER_EMAIL_MAPPING_JSON" | jq -r --arg username "$PR_OWNER_USERNAME" '.[$username]')
+          
+          # Use `jq` to extract the email, ensuring the variable is used correctly
+          PR_OWNER_EMAIL=$(echo "$USER_EMAIL_MAPPING_JSON" | jq -r --arg username "${{ env.PR_OWNER_USERNAME }}" '.[$username]')
           echo "PR_OWNER_EMAIL=$PR_OWNER_EMAIL"
+          
+          # Check if the email is empty and set a default
           if [[ -z "$PR_OWNER_EMAIL" ]]; then
             PR_OWNER_EMAIL="unknown@example.com"
           fi
+          
           echo "Resolved PR Owner Email: $PR_OWNER_EMAIL"
