@@ -29,14 +29,12 @@ jobs:
           USER_EMAIL_MAPPING_JSON: ${{ env.USER_EMAIL_MAPPING_JSON }}
           PR_OWNER_USERNAME: ${{ env.PR_OWNER_USERNAME }}
         run: |
-          # Display the JSON to verify it's correct
-          echo $USER_EMAIL_MAPPING_JSON
-          
+          echo "Using USERNAME: $PR_OWNER_USERNAME"
+          echo "JSON Mapping: $USER_EMAIL_MAPPING_JSON"
           # Use `jq` to extract the email, ensuring the variable is used correctly
-          PR_OWNER_EMAIL=$(echo "$USER_EMAIL_MAPPING_JSON" | jq -r --arg username "${{ env.PR_OWNER_USERNAME }}" '.[$username]')
+          PR_OWNER_EMAIL=$(echo "$USER_EMAIL_MAPPING_JSON" | jq -r --arg username "$PR_OWNER_USERNAME" '.[$username]')
           echo "PR_OWNER_EMAIL=$PR_OWNER_EMAIL"
           
-          # Check if the email is empty and set a default
           if [[ -z "$PR_OWNER_EMAIL" ]]; then
             PR_OWNER_EMAIL="unknown@example.com"
           fi
